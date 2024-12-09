@@ -13,7 +13,7 @@ I do have some experience of Javascript but I was not so fluent. As of now, I ha
 
 That part of the project was fairly easy.
 ## JAVASCRIPT
-I almost had to learn it from scratch, the only think I knew was DOMContentLoaded xD. Youtubers like love babbar really helped me
+I almost had to learn it from scratch, the only think I knew was DOMContentLoaded xD. Youtubers like love babbar really helped me and I went to stackoverflow, mdndocs, chatgpt for debugging.
 
 I learned following things while building project simultaneously -
 - Asynch and Await
