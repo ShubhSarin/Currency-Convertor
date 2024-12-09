@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(40, 40, 40);
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+.top-heading{
+    background-color: rgb(228, 0, 76);
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+}
+.semi-heading{
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.semi-heading-1, .semi-heading-2{
+    display: block;
+    text-align: center;
+    margin: 0 3%;
+}
+.arrow{
+    margin-top: 4px;
+}
+/*Removing the side arrows in number input field*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+/*Styling the Input Field*/
+.input{
+    padding: 0 10px;
+    margin: 0 ;
+    border-radius: 13px;
+    height: 26px;
+}
+/*Style of convert button */
+.convert-button{
+    text-align: center;
+}
+.button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: 500;
+    padding: 2px 10px;
+    border-radius: 7px;
+    background-color: rgb(40, 40, 40);
+    border: solid 5px black;
+    color: white;
+}
+.button:hover{
+    background-color: rgb(228, 0, 76);
+    cursor: pointer;
+}
+.sh-element{
+    display: block; 
+}
+.select{
+    width: 150px;
+    margin: 0 auto;
+    height: 26px;
+    border-radius: 13px;
+    text-align: center;
+}
+.best-option{
+    color: white;
+    text-align: center;
+}
