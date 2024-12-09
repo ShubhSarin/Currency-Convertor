@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function(){
     //Convert Button
     const convert = document.getElementById('convert');
     convert.addEventListener('click', function(){
+        //Loading message as it may take some time to fetch api again and again
+        bestOption.innerHTML = `<p>You will soon be swimming in money(pennies)...</p>`;
         //Fetches once again after every button click with base currency as the one in input select
         let newfetch = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${inputCurrency.value}.json?nocache=${Date.now()}`;
         async function newf() {
