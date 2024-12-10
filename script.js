@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function(){
     const outputField = document.getElementById('output-field');
     const bestOption = document.getElementById('best-option');
 
+    //Resetting thet input and output fields
+    inputField.value = '';
+    outputField.value = 0;
+
     //Adding all the currencies in select options
     async function firstFetch() {
         let response = await fetch(apiadd);
@@ -99,11 +103,14 @@ document.addEventListener('DOMContentLoaded', function(){
                 //If input is empty
                 bestOption.innerHTML = "<p>Please enter some value</p>"
             }else{
-                bestOption.innerHTML = `<p> Best Possible Exchanges :</p>
+                bestOption.innerHTML = `<p> Top 3 exchanges :</p>
                 <ol>
-                <li>${inputCurrency.value} -> ${dataMax[highestAmounts[0]]} -> ${outputCurrency.value} => <b>${highestAmounts[0]} ${outputCurrency.value} </b></li>
-                <li>${inputCurrency.value} -> ${dataMax[highestAmounts[1]]} -> ${outputCurrency.value} => <b>${highestAmounts[1]} ${outputCurrency.value} </b></li>
-                <li>${inputCurrency.value} -> ${dataMax[highestAmounts[2]]} -> ${outputCurrency.value} => <b>${highestAmounts[2]} ${outputCurrency.value} </b></li>
+                    <li>${inputCurrency.value} -> ${dataMax[highestAmounts[0]]} -> ${outputCurrency.value} => 
+                        <b>${highestAmounts[0]} ${outputCurrency.value} </b></li>
+                    <li>${inputCurrency.value} -> ${dataMax[highestAmounts[1]]} -> ${outputCurrency.value} => 
+                        <b>${highestAmounts[1]} ${outputCurrency.value} </b></li>
+                    <li>${inputCurrency.value} -> ${dataMax[highestAmounts[2]]} -> ${outputCurrency.value} => 
+                        <b>${highestAmounts[2]} ${outputCurrency.value} </b></li>
                 </ol>`;
             }
         }
