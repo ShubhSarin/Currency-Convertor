@@ -8,31 +8,36 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <header class="top-heading">
-        <h1>CURRENCY CONVERTOR</h1>
-    </header>
-    <div class="semi-heading">
-
-        <!-- Input Side -->
-        <div class="semi-heading-1"><p class="sh-element ">From</p>
-            <input type="number" class="sh-element input input-from" id="input-field" placeholder="0">
-            <label for="input-currency" class="sh-element ">Currency?</label>
-            <select name="input-currency" id="input-currency" class="select sh-element"></select>
+    <div class="content">
+        <div class="top-heading">
+            <h1 class="top-heading-text">CURRENCY CONVERTOR</h1>
         </div>
-
-        <!-- Middle Arrow Image-->
-        <img class="arrow" src="two-arrows-white.png" height="60px">
-        
-        <!-- Output Side(identical to input side) -->
-        <div class="semi-heading-2"><p class="sh-element ">To</p>
-            <input type="number" class="sh-element input input-to" id="output-field" readonly>
-            <label for="input-currency" class="sh-element ">Currency?</label>
-            <select name="output-currency" id="output-currency" class="sh-element select"></select> 
+        <div class="conversion-content">
+        <div class="semi-heading">
+            
+            <!-- Input Side -->
+            <div class="semi-heading-1"><p class="sh-element ">From</p>
+                <input type="number" class="sh-element input input-from" id="input-field" placeholder="0">
+                <label for="input-currency" class="sh-element ">Currency?</label>
+                <select name="input-currency" id="input-currency" class="select sh-element"></select>
+            </div>
+            
+            <!-- Middle Arrow Image-->
+            <img class="arrow" src="two-arrows-white.png" height="60px">
+            
+            <!-- Output Side(identical to input side) -->
+            <div class="semi-heading-2"><p class="sh-element ">To</p>
+                <input type="number" class="sh-element input input-to" id="output-field" readonly>
+                <label for="input-currency" class="sh-element ">Currency?</label>
+                <select name="output-currency" id="output-currency" class="sh-element select"></select> 
+            </div>
         </div>
+        <div class="input fields">
+        </div>
+        <div class="convert-button-div"><button class="button" id="convert">Convert</button></div>
+        <div class="best-option" id="best-option"></div>
     </div>
-    <div class="input fields">
+    <div class="credit"><p>By Shubh Sareen(24b0314)</p></div>
     </div>
-    <div class="convert-button"><button class="button" id="convert">Convert</button></div>
-    <div class="best-option" id="best-option"></div>
 </body>
 </html>

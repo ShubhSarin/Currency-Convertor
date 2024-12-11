@@ -27,7 +27,7 @@ and so on..
 After searching for the answer to this question in the vast stack of stackoverflow questions, in the sweaty alleys of reddit and then when lord chatgpt themself said to give up, I am here without the answer to this question.
 
 VS Code Live Preview - 
-![alt text](image.png) 
+![alt text](image-2.png) 
 
 Firefox(http://) - 
 ![alt text](image-1.png)
