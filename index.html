@@ -19,7 +19,10 @@
             <div class="semi-heading-1"><p class="sh-element ">From</p>
                 <input type="number" class="sh-element input input-from" id="input-field" placeholder="0">
                 <label for="input-currency" class="sh-element ">Currency?</label>
-                <select name="input-currency" id="input-currency" class="select sh-element"></select>
+                <input type="text" list="input-currency" class="datalistinput" id="datalist-input">
+                <datalist name="input-currency" id="input-currency" class="input-datalist datalist">
+                </datalist>
+                <!-- <select> name="input-currency" id="input-currency" class="select sh-element"></select> -->
             </div>
             
             <!-- Middle Arrow Image-->
@@ -28,8 +31,11 @@
             <!-- Output Side(identical to input side) -->
             <div class="semi-heading-2"><p class="sh-element ">To</p>
                 <input type="number" class="sh-element input input-to" id="output-field" readonly>
-                <label for="input-currency" class="sh-element ">Currency?</label>
-                <select name="output-currency" id="output-currency" class="sh-element select"></select> 
+                <label for="output-currency" class="sh-element ">Currency?</label>
+                <input type="text" list="output-currency" class="datalistinput" id="datalist-output">
+                <datalist name="output-currency" id="output-currency" class="output-datalist datalist">
+                </datalist>
+                <!-- <select name="output-currency" id="output-currency" class="sh-element select"></select>  -->
             </div>
         </div>
         <div class="input fields">
