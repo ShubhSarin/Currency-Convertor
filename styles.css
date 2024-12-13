@@ -63,6 +63,11 @@ input[type="number"]{
     border-radius: 13px;
     height: 26px;
 }
+.datalistinput{
+    border-radius: 10px;
+    height: 25px;
+    padding: 0 7px;
+}
 /*Style of convert button */
 .convert-button-div{
     text-align: center;
