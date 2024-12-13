@@ -19,7 +19,11 @@ If the best exchange value is worse than the direct exchange, it will print the 
 
 Currency code like usd, inr, jpy etc are to be written in 'from' and 'to' field (case insensitive), the input field can be used to search with name of country as well (thanks to datalist) but at the time of conversion, it will be required to write a valid country code in input fields.
 
-# My Journey (optional read)
+I used these many loops because the exchange rate of a pair isn't really the reciprocal of each other like USD -> INR != 1/(INR -> USD) so that logic won't work that good.
+
+*SOME CURRENCIES WILL SHOW HUGE MARGIN BUT THEY MIGHT BE CRYPTOCURRENCIES*
+
+# My Journey (optional to read)
 
 ## HTML and CSS
 I know HTML and CSS as I was learning them after the first sem.
