@@ -8,6 +8,7 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <!-- Main content div -->
     <div class="content">
         <div class="top-heading">
             <h1 class="top-heading-text">CURRENCY CONVERTOR</h1>
@@ -17,10 +18,10 @@
             
             <!-- Input Side -->
             <div class="semi-heading-1"><p class="sh-element ">From</p>
-                <input type="number" class="sh-element input input-from" id="input-field" placeholder="0">
+                <input type="number" class="sh-element input-from" id="input-field" placeholder="0">
                 <label for="input-currency" class="sh-element ">Currency?</label>
-                <input type="text" list="input-currency" class="datalistinput" id="datalist-input">
-                <datalist name="input-currency" id="input-currency" class="input-datalist datalist">
+                <input type="text" list="datalist" class="datalistinput" id="datalist-input">
+                <datalist name="input-currency" id="datalist" class="datalist">
                 </datalist>
             </div>
             
@@ -29,19 +30,16 @@
             
             <!-- Output Side(identical to input side) -->
             <div class="semi-heading-2"><p class="sh-element ">To</p>
-                <input type="number" class="sh-element input input-to" id="output-field" readonly>
+                <input type="number" class="sh-element input-to" id="output-field" readonly>
                 <label for="output-currency" class="sh-element ">Currency?</label>
-                <input type="text" list="output-currency" class="datalistinput" id="datalist-output">
-                <datalist name="output-currency" id="output-currency" class="output-datalist datalist">
-                </datalist>
+                <input type="text" list="datalist" class="datalistinput" id="datalist-output">
             </div>
         </div>
-        <div class="input fields">
-        </div>
+        <!-- Convert Button -->
         <div class="convert-button-div"><button class="button" id="convert">Convert</button></div>
         <div class="best-option" id="best-option"></div>
     </div>
-    <div class="credit"><p>By Shubh Sareen(24b0314)</p></div>
-    </div>
+    <div class="credit"><p><b>By Shubh Sareen(24b0314)</b></p></div>
+</div>
 </body>
 </html>

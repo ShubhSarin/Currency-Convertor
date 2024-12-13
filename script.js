@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const apiadd = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json";
 
     //Storing all the required HTML elements
-    const inputList = document.getElementById('input-currency');
-    const outputList = document.getElementById('output-currency');
+    //Datalist
+    const dataList = document.getElementById('datalist');
+    //Currency input and output fields
     const inputField = document.getElementById('input-field');
     const outputField = document.getElementById('output-field');
+    //Div which will contain the best 3 exchanges if found
     const bestOption = document.getElementById('best-option');
+    //Currency input and output
     const datalistInput = document.getElementById('datalist-input');
     const datalistOutput = document.getElementById('datalist-output');
 
@@ -20,23 +23,16 @@ document.addEventListener('DOMContentLoaded', function(){
     async function firstFetch() {
         let response = await fetch(apiadd);
         let currencylist = await response.json();
-        //adding currencies in select options of input
+        //adding currencies in select options of input and output
         for(let currency in currencylist){
             currencies.push(currency);
             let option = document.createElement('option');
             option.textContent = `${currency} (${currencylist[currency]})`;
             option.value = currency;
-            inputList.appendChild(option);
-            option = document.createElement('option');
-            option.textContent = `${currency} (${currencylist[currency]})`;
-            option.value = currency;
-            outputList.appendChild(option);
+            dataList.appendChild(option);
         }
-        
-        //USD to INR conversion by default
-        inputList.value = 'usd';
+        //placeholder
         datalistInput.placeholder = 'usd';
-        outputList.value = 'inr';
         datalistOutput.placeholder = 'inr';
     }
     firstFetch();
@@ -45,13 +41,21 @@ document.addEventListener('DOMContentLoaded', function(){
     //Convert Button
     const convert = document.getElementById('convert');
     convert.addEventListener('click', function(){
-        //Gives an error if the currency code is not valid
+        //Makes currency input caseinsensitive
         let inputcurr = datalistInput.value;
         let outputcurr = datalistOutput.value;
         inputcurr = inputcurr.toLowerCase();
         outputcurr = outputcurr.toLowerCase();
+
+        //Checks if both the currencies are valid
         if(!currencies.includes(inputcurr) || !currencies.includes(outputcurr)){
-            bestOption.innerHTML = `<p style="color: red;"><b>ENTER A VALID CURRENCY CODE!!!(eg. usd, inr</b></p>`;
+            bestOption.innerHTML = `<p style="color: red;"><b>ENTER A VALID CURRENCY CODE!!!(eg. usd, inr)</b></p>`;
+            return;
+        }
+
+        //Checks if both the currencies are safe
+        if(inputcurr === outputcurr){
+            bestOption.innerHTML = `<p style="color: red;"><b>FROM AND TO CURRENCIES CAN NOT BE SAME!!!</b></p>`;
             return;
         }
 

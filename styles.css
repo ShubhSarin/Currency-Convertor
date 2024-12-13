@@ -1,19 +1,22 @@
+/* Removing margin and padding for better control */
 *{
     margin: 0;
     padding: 0;
 }
+/* Background image, text color, and font */
 body{
     background-image: url('image.png');
     color: black;
     font-family:'Courier New', Courier, monospace;
 }
-
+/* Main container */
 .conversion-content{
     background-color: rgb(40, 40, 40, 1);
     animation: 1s 1.5s faded;
     animation-fill-mode: forwards;
     padding: 7px;
 }
+/* Heading container */
 .top-heading{
     display: table;
     padding: auto;
@@ -24,13 +27,14 @@ body{
     
     animation: 1s 0.5s first-load backwards;
 }
-
+/* Heading text */
 .top-heading-text {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     animation: 1s 0.5s heading-text backwards;
 }
+/* Input, arrow and output */
 .semi-heading{
     color: white;
     font-size: larger;
@@ -39,11 +43,13 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+/* Input and output */
 .semi-heading-1, .semi-heading-2{
     display: block;
     text-align: center;
     margin: 0 3%;
 }
+/* Arrow */
 .arrow{
     margin-top: 30px;
 }
@@ -56,17 +62,21 @@ input::-webkit-inner-spin-button{
 input[type="number"]{
     -moz-appearance: textfield;
 }
-/*Styling the Input Field*/
-.input{
+/*Styling the Number Input Field*/
+.input-from, .input-to{
     padding: 0 10px;
     margin: 0 ;
     border-radius: 13px;
     height: 26px;
 }
+/* Currency text inputs */
 .datalistinput{
     border-radius: 10px;
     height: 25px;
     padding: 0 7px;
+}
+.sh-element{
+    display: block; 
 }
 /*Style of convert button */
 .convert-button-div{
@@ -100,20 +110,12 @@ input[type="number"]{
     font-weight: 900;
     cursor: pointer;
 }
-.sh-element{
-    display: block; 
-}
-.select{
-    width: 150px;
-    margin: 0 auto;
-    height: 26px;
-    border-radius: 13px;
-    text-align: center;
-}
+/* Final Output of best 3 exchanges */
 .best-option{
     color: white;
     text-align: center;
 }
+/* Credit at bottom right */
 .credit{
     position: absolute;
     bottom: 0px;
@@ -126,6 +128,7 @@ input[type="number"]{
     animation: 1s 2.5s credit;
     animation-fill-mode: both;
 }
+/* All the animations */
 @keyframes first-load{
     0%{
         height: 100vh;
