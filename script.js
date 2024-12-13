@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function(){
         datalistOutput.placeholder = 'inr';
     }
     firstFetch();
-    console.log(currencies);
 
     //Convert Button
     const convert = document.getElementById('convert');
