@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
             return;
         }
 
-        //Checks if both the currencies are safe
+        //Checks if both the currencies are same
         if(inputcurr === outputcurr){
             bestOption.innerHTML = `<p style="color: red;"><b>FROM AND TO CURRENCIES CAN NOT BE SAME!!!</b></p>`;
             return;
